@@ -1,19 +1,19 @@
 # implied volatility solvers + helpers
 # src/implied_vol.py
+from scipy.stats import norm
 import numpy as np
-from scipy.optimize import brentq
-from src.bs import bs_price
+from bs import black_scholes_price, vega
 
-def implied_vol_from_price(mkt_price, S, K, r, q, T, option='call', tol=1e-8):
-    # define objective: model_price(sigma) - mkt_price
-    def objective(sigma):
-        return bs_price(S,K,r,q,sigma,T,option) - mkt_price
+def implied_volatility(S, K, T, r, market_price, option_type="call", tol=1e-6, max_iter=100):
+    sigma = 0.2  # initial guess
+    for i in range(max_iter):
+        price = black_scholes_price(S, K, T, r, sigma, option_type)
+        diff = market_price - price
+        if abs(diff) < tol:
+            return sigma
+        v = vega(S, K, T, r, sigma)
+        if v == 0:
+            break
+        sigma += diff / v
+    return None  # did not converge
 
-    # bounds
-    low, high = 1e-8, 5.0
-    # Check if market price is within [price(sigma_low), price(sigma_high)]
-    try:
-        # bracketing
-        return brentq(objective, low, high, xtol=tol, maxiter=200)
-    except Exception as e:
-        return np.nan  # handle by logging in notebook
