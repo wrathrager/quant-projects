@@ -1,3 +1,5 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # 🧮 Options Pricing & Volatility Surfaces in Python
 
 This project explores different approaches to **derivatives pricing** and **volatility modeling**, including:

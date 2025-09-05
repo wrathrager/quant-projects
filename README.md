@@ -1,3 +1,5 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # quant-projects
 all my quant finance and algo trading related projects are in this repo, 
 # 🧮 Options Pricing & Volatility Surfaces in Python
