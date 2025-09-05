@@ -12,5 +12,4 @@ This project explores different approaches to **derivatives pricing** and **vola
 - 🎲 **Monte Carlo Simulations** (Asian & Barrier options)
 - 🗺️ **Implied Volatility Surface Construction**
 
-## 📂 Project Structure
 
