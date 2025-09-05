@@ -10,3 +10,8 @@ hmmlearn            # later project; safe to include
 pykalman            # optional for Kalman
 quantlib            # optional (QuantLib-Python, may require system deps)
 yfinance           # optional for data fetching
+ipywidgets
+python-dotenv
+black
+isort
+pytest

@@ -16,3 +16,39 @@
 
 # Ignore VS Code settings
 .vscode/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual Envs
+.env
+.venv
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+*.csv
+*.xlsx
+*.h5
+*.pkl
+
+# Logs
+*.log
+
+# Outputs
+notebooks_output/
