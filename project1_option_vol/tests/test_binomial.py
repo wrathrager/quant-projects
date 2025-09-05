@@ -1,8 +1,8 @@
 # tests/test_binomial.py
 import sys
+import os
+sys.path.append(os.path.abspath(r"C:\Users\utkarsh\OneDrive\Desktop\quant-projects\project1_option_vol\src"))
 import math
-sys.path.append("src")
-
 from binomial import crr_price
 from bs import black_scholes_price
 

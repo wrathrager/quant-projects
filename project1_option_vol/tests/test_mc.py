@@ -1,6 +1,7 @@
 # tests/test_mc.py
 import sys
-sys.path.append("src")
+import os
+sys.path.append(os.path.abspath(r"C:\Users\utkarsh\OneDrive\Desktop\quant-projects\project1_option_vol\src"))
 from mc_pricers import mc_arithmetic_asian
 import numpy as np
 
